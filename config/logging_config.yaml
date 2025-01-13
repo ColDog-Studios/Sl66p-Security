@@ -1,0 +1,22 @@
+loggers:
+  default:
+    level: INFO
+    handlers: [console, file]
+  
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple
+
+  file:
+    class: logging.FileHandler
+    filename: sleep_security.log
+    level: DEBUG
+    formatter: detailed
+
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(filename)s:%(lineno)d'

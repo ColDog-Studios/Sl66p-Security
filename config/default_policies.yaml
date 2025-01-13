@@ -1,0 +1,32 @@
+# default_policies.yaml
+
+default_policies:
+  device_hardening:
+    os_hardening:
+      enabled: true
+      policies:
+        - disable_guest_account
+        - enforce_strong_passwords
+        - enable_firewall
+    app_hardening:
+      enabled: true
+      policies:
+        - disable_unnecessary_services
+        - enforce_application_updates
+        - restrict_admin_access
+  monitoring:
+    rogue_device_detection:
+      enabled: true
+      alert_threshold: 5
+    insecure_configuration_monitoring:
+      enabled: true
+      alert_threshold: 3
+  patch_management:
+    check_frequency: daily
+    alert_on_outdated_firmware: true
+  compliance:
+    required_standards:
+      - NIST
+      - CIS
+    reporting_frequency: weekly
+    alert_on_compliance_gaps: true

@@ -1,0 +1,9 @@
+numpy
+requests
+pyyaml
+scapy
+paramiko
+pytest
+flask
+flask-restful
+watchdog
