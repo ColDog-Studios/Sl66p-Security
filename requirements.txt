@@ -7,3 +7,6 @@ pytest
 flask
 flask-restful
 watchdog
+setuptools
+matplotlib
+python-nmap

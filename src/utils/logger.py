@@ -30,3 +30,6 @@ class Logger:
 
     def critical(self, message):
         self.logger.critical(message)
+
+def setup_logging(name, config_path='config/logging_config.yaml'):
+    return Logger(name, config_path)
